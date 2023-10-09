@@ -1,6 +1,6 @@
 # 42cursus - Libft
 
-This first project as a 42 student. Create own library
+[![aaa.jpg](https://i.postimg.cc/90sbPmYg/aaa.jpg)](https://postimg.cc/BPc24Gy2)
 
 # Summary
  1. [Makefile](#makefile)
