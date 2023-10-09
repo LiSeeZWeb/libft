@@ -8,7 +8,7 @@
  3. [Additional functions](#additionalfunctions)
  4. [Bonus](#bonus)
 
-# <a name="makefile">Makefile</a>
+# <a name="makefile">Makefile rules</a>
 
 | Commande       	|  Actions 	|
 |----------------	|----------	|
