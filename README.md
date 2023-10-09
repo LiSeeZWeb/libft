@@ -3,8 +3,8 @@
 [![aaa.jpg](https://i.postimg.cc/90sbPmYg/aaa.jpg)](https://postimg.cc/BPc24Gy2)
 
 # Summary
- 1. [Makefile](#makefile)
- 2. [Libc Functions](#libc)
+ 1. [Makefile rules](#makefile)
+ 2. [Libc functions](#libc)
  3. [Additional functions](#additionalfunctions)
  4. [Bonus](#bonus)
 
