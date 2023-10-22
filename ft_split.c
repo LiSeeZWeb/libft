@@ -9,7 +9,8 @@
 /*   Updated: 2023/10/03 18:47:39 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/* asigna memoria dinamica a un array de strings al separar la strng "s"
+en substrings con el caracter "c" como delimitador */
 #include "libft.h"
 
 static int	count_words(const char *s, char c)

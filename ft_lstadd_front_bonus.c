@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: victor-g <victor-g@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 19:39:22 by victor-g          #+#    #+#             */
-/*   Updated: 2023/09/28 19:46:24 by victor-g         ###   ########.fr       */
+/*   Created: 2023/10/05 14:25:41 by victor-g          #+#    #+#             */
+/*   Updated: 2023/10/05 14:32:25 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/* compara los primeros(size) de caracteres de las cadenas "s1" y "s2" */
+/* añade el nodo "new" al principio de la lista */
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		if (s1[i] == '\0' || s2[i] == '\0' || s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
-	}
-	return (0);
+	if (lst == NULL || new == NULL)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }

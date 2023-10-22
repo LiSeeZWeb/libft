@@ -9,7 +9,8 @@
 /*   Updated: 2023/09/25 20:46:07 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/* concatena la cadena "src" en la cadena "dest" hasta que ESTE llegue
+a su	maximo(size) terminando en nulo */
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)

@@ -9,7 +9,7 @@
 /*   Updated: 2023/10/02 17:35:47 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/* imprime un caracter "c"... (fd es la salida) */
 #include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)

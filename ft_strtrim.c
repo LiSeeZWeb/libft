@@ -9,7 +9,7 @@
 /*   Updated: 2023/10/02 17:28:13 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/* devuelve la cadena "s1" sin los caracteres "set" */
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)

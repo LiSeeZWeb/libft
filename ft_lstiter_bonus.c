@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: victor-g <victor-g@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 19:39:22 by victor-g          #+#    #+#             */
-/*   Updated: 2023/09/28 19:46:24 by victor-g         ###   ########.fr       */
+/*   Created: 2023/10/08 12:19:05 by victor-g          #+#    #+#             */
+/*   Updated: 2023/10/08 13:16:19 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/* compara los primeros(size) de caracteres de las cadenas "s1" y "s2" */
+/* aplica la funcion "f" a cada elemento(content) de la lista enlazada(lst)   */
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
+	while (lst != NULL)
 	{
-		if (s1[i] == '\0' || s2[i] == '\0' || s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
+		(*f)(lst->content);
+		lst = lst->next;
 	}
-	return (0);
 }

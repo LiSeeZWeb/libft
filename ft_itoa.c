@@ -9,7 +9,7 @@
 /*   Updated: 2023/10/03 18:46:49 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/* convierte un numero entero "n" en una cadena de caracteres */
 #include "libft.h"
 
 size_t	len_int(int n)

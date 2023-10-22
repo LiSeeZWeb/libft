@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: victor-g <victor-g@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 19:39:22 by victor-g          #+#    #+#             */
-/*   Updated: 2023/09/28 19:46:24 by victor-g         ###   ########.fr       */
+/*   Created: 2023/10/08 11:46:13 by victor-g          #+#    #+#             */
+/*   Updated: 2023/10/08 13:13:28 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/* compara los primeros(size) de caracteres de las cadenas "s1" y "s2" */
+/* elimina todos los nodos de una lista y libera la memoria asociada */
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	size_t	i;
+	t_list	*tmp;
 
-	i = 0;
-	while (i < n)
+	if (lst == NULL || del == NULL)
+		return ;
+	while (*lst != NULL)
 	{
-		if (s1[i] == '\0' || s2[i] == '\0' || s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
+		tmp = (*lst)->next;
+		(*del)((*lst)->content);
+		free(*lst);
+		*lst = tmp;
 	}
-	return (0);
 }

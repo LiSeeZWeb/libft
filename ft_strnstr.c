@@ -9,7 +9,8 @@
 /*   Updated: 2023/10/01 16:27:11 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/* buscar la primera aparicion de la subcadena(needle) en la cadena "haystack"
+hasta los primeros (size) de valores */
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)

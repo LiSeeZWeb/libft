@@ -9,15 +9,15 @@
 /*   Updated: 2023/10/01 16:44:13 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/* transforma una string en un numero entero */
 #include "libft.h"
 
 int	ft_atoi(const char *str)
 {
-	long	num;
+	long	atoi;
 	int		sign;
 
-	num = 0;
+	atoi = 0;
 	sign = 1;
 	while ((*str >= 9 && *str <= 13) || *str == 32)
 		str++;
@@ -29,9 +29,9 @@ int	ft_atoi(const char *str)
 	}
 	while (ft_isdigit(*str))
 	{
-		num *= 10;
-		num += *str - 48;
+		atoi *= 10;
+		atoi += *str - 48;
 		str++;
 	}
-	return (num * sign);
+	return (atoi * sign);
 }

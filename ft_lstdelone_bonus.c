@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: victor-g <victor-g@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 19:39:22 by victor-g          #+#    #+#             */
-/*   Updated: 2023/09/28 19:46:24 by victor-g         ###   ########.fr       */
+/*   Created: 2023/10/08 12:38:38 by victor-g          #+#    #+#             */
+/*   Updated: 2023/10/08 12:56:28 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/* compara los primeros(size) de caracteres de las cadenas "s1" y "s2" */
+/*elimina un unico nodo de una lista y libera la memoria asociada a dicho nodo*/
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		if (s1[i] == '\0' || s2[i] == '\0' || s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
-	}
-	return (0);
+	if (lst == NULL || del == NULL)
+		return ;
+	(*del)(lst->content);
+	free(lst);
 }

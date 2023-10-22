@@ -9,7 +9,7 @@
 /*   Updated: 2023/09/25 18:25:58 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/* copia los primeros(size) valores de "src" a "dest", hasta si se superponen */
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)

@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: victor-g <victor-g@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 19:39:22 by victor-g          #+#    #+#             */
-/*   Updated: 2023/09/28 19:46:24 by victor-g         ###   ########.fr       */
+/*   Created: 2023/10/05 14:32:44 by victor-g          #+#    #+#             */
+/*   Updated: 2023/10/05 14:39:18 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/* compara los primeros(size) de caracteres de las cadenas "s1" y "s2" */
+/* cuenta el numero de nodos que hay en la lista */
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (i < n)
+	while (lst)
 	{
-		if (s1[i] == '\0' || s2[i] == '\0' || s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
+		lst = lst->next;
 	}
-	return (0);
+	return (i);
 }

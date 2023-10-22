@@ -9,7 +9,7 @@
 /*   Updated: 2023/10/02 17:21:37 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/* asigna MD a una string creada a partir de la concatenacion de s1 con s2    */
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

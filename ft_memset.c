@@ -9,7 +9,7 @@
 /*   Updated: 2023/09/25 17:07:31 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/* cambia el valor de los primeros "size" del string "str" por el caracter "c"*/
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)

@@ -9,7 +9,7 @@
 /*   Updated: 2023/10/02 17:54:45 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/* imprime una string */
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)

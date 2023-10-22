@@ -9,16 +9,16 @@
 /*   Updated: 2023/10/02 09:38:24 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/* asigna memoria dinamica a una string empezada por valores nulos */
 #include "libft.h"
 
-void	*ft_calloc(size_t nelem, size_t elsize)
+void	*ft_calloc(size_t num, size_t size)
 {
-	void	*s;
+	void	*p;
 
-	s = malloc(nelem * elsize);
-	if (s == NULL)
+	p = malloc(num * size);
+	if (!p)
 		return (NULL);
-	ft_bzero(s, (nelem * elsize));
-	return (s);
+	ft_bzero(p, (num * size));
+	return (p);
 }

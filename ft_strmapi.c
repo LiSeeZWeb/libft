@@ -9,7 +9,8 @@
 /*   Updated: 2023/10/03 18:52:55 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/* asigna MD a una cadena que realiza una operacion "f" con cada caracter
+de la cadena "s" */
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

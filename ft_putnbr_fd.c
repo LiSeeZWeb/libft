@@ -9,7 +9,7 @@
 /*   Updated: 2023/10/02 17:59:07 by victor-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/* imprime un numero entero */
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
